@@ -8,7 +8,7 @@
     id_paciente INT UNSIGNED NOT NULL AUTO_INCREMENT,
     nome VARCHAR(100) NOT NULL,
     rg VARCHAR(12) NOT NULL UNIQUE,
-    data_nasciemnto DATE,
+    data_nascimento DATE,
     telefone VARCHAR(20) NOT NULL,
     cpf CHAR(11) NOT NULL UNIQUE,
     PRIMARY KEY (id_paciente)
