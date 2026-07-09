@@ -14,7 +14,16 @@
     PRIMARY KEY (id_paciente)
  ); 
  
- -- Criando a tabela Consulta
+ -- Criando a tabela Medico 
+ CREATE TABLE medico(
+    
+    id_medico INT UNSIGNED NOT NULL AUTO_INCREMENT,
+    nome_medico VARCHAR(100) NOT NULL,
+    especialidade VARCHAR(100) NOT NULL,
+    PRIMARY KEY (id_medico)
+    );
+
+  -- Criando a tabela Consulta
  CREATE TABLE consulta(
  
     id_consulta INT UNSIGNED NOT NULL AUTO_INCREMENT,
@@ -24,12 +33,4 @@
     PRIMARY KEY (id_consulta),
     FOREIGN KEY (id_paciente) REFERENCES paciente(id_paciente),
     FOREIGN KEY (id_medico) REFERENCES medico(id_medico)
- );
- 
- -- Criando a tabela Medico 
- CREATE TABLE medico(
-    
-    id_medico INT UNSIGNED NOT NULL AUTO_INCREMENT,
-    nome_medico VARCHAR(100) NOT NULL,
-    especialidade VARCHAR(100) NOT NULL,
-    PRIMARY KEY (id_medico)
+    );
