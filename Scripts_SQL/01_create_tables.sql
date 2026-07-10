@@ -8,7 +8,7 @@
     id_paciente INT UNSIGNED NOT NULL AUTO_INCREMENT,
     nome VARCHAR(100) NOT NULL,
     rg VARCHAR(12) NOT NULL UNIQUE,
-    data_nascimento DATE,
+    data_nascimento DATE NOT NULL,
     telefone VARCHAR(20) NOT NULL,
     cpf CHAR(11) NOT NULL UNIQUE,
     PRIMARY KEY (id_paciente)
@@ -27,7 +27,7 @@
  CREATE TABLE consulta(
  
     id_consulta INT UNSIGNED NOT NULL AUTO_INCREMENT,
-    data_consulta DATE,
+    data_consulta DATE NOT NULL,
     id_paciente INT UNSIGNED NOT NULL,
     id_medico INT UNSIGNED NOT NULL,
     PRIMARY KEY (id_consulta),
